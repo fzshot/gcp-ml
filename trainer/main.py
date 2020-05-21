@@ -3,13 +3,10 @@ import datetime
 import tensorflow as tf
 from tensorflow_io.bigquery import BigQueryClient
 
-BUCKET = "qwiklabs-gcp-03-e99f5bba4b37-ml-test"
-PROJECT = 'qwiklabs-gcp-03-e99f5bba4b37'
-REGION = 'us-central1'
-EXPORT_PATH = "gs://{}/model".format(BUCKET)
-CHECK_POINT_PATH = "gs://{}/checkpoint/checkpoint".format(BUCKET)
-
-
+PROJECT_BUCKET = "YOUR_PROJECT_ID"
+REGION = "us-central1"
+EXPORT_PATH = "gs://{}/model".format(PROJECT_BUCKET)
+CHECK_POINT_PATH = "gs://{}/checkpoint/checkpoint".format(PROJECT_BUCKET)
 # EXPORT_PATH = "../model"
 
 
@@ -26,7 +23,7 @@ def main():
         # publicdata.samples.natality
         tensorflow_io_bigquery_client = BigQueryClient()
         read_session = tensorflow_io_bigquery_client.read_session(
-            "projects/{}".format("qwiklabs-gcp-03-e99f5bba4b37"),
+            "projects/{}".format(PROJECT_BUCKET),
             "bigquery-public-data", "natality", "samples",
             [
                 "weight_pounds",
