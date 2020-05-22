@@ -1,0 +1,32 @@
+{
+  "instances": [
+    {
+      "key": "b1",
+      "is_male": 1,
+      "mother_age": 26.0,
+      "plurality": 1,
+      "gestation_weeks": 39
+    },
+    {
+      "key": "g1",
+      "is_male": 0,
+      "mother_age": 29.0,
+      "plurality": 1,
+      "gestation_weeks": 38
+    },
+    {
+      "key": "b2",
+      "is_male": 1,
+      "mother_age": 26.0,
+      "plurality": 3,
+      "gestation_weeks": 39
+    },
+    {
+      "key": "u1",
+      "is_male": 0,
+      "mother_age": 29.0,
+      "plurality": 2,
+      "gestation_weeks": 38
+    }
+  ]
+}
